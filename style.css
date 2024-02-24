@@ -64,6 +64,11 @@ main{
     margin:10rem auto;
 
 }
+/* .backdrop{
+   width: 0;
+   height: 0;
+   display: none;
+} */
 .about-content{
     padding:4rem;
     position: absolute;
@@ -158,10 +163,12 @@ footer{
 .footer-content p:last-of-type{
     grid-column: span 2;
 }
+.hamburger{
+    background-color: transparent;
+    border: none;
+   display: none;
+}
 @media (max-width:950px) {
-    body{
-        color:green;
-    }
     .about-content{
         padding:2rem;
         max-width: 500px;
@@ -172,7 +179,11 @@ footer{
     .feature-gallery{
         justify-content: space-evenly;
     }
+    .hamburger{
+        display: none;
+    }
 }
+
 @media (max-width:800px) {
     .container{
         padding: 1rem;
@@ -227,14 +238,13 @@ footer{
     .footer-content p:last-of-type{
         grid-row: 6/7;
     }
+    
 }
 @media (max-width:630px) {
     header{
         background-image: url(images/mobile/image-hero.jpg);
         min-height: 600px;
-    }
-    header nav{
-        display: none;
+        position: relative;
     }
     header h1{
         padding: 1rem;
@@ -242,5 +252,71 @@ footer{
     }
     .feature-gallery figcaption{
         bottom: 1rem;
+    }
+    .logo{
+        position: relative;
+        z-index: 101;
+    }
+    .hamburger{
+        display: block;
+        position: relative;
+        z-index: 101;
+
+    }
+    body{
+        overflow-x: hidden;
+    }
+    /* .logo,.hamburger{
+        position: fixed;
+        z-index: 101;
+    } */
+    .nav-container ul{
+        position:fixed;
+        flex-direction: column;
+        top: 30%;
+        left: 8%;
+        z-index: 100;
+        transform: translateX(999px);
+        color: var(--white);
+        transition: all 0.6s ease-in-out;
+
+    }
+    .backdrop{
+        height: 2rem;
+        width: 2rem;
+        top: 3rem;
+        right: 1.7rem;
+        position: fixed;
+        border-radius: 50%;
+        background-color: var(--black);
+        z-index: 99;
+        transform: scale(0);
+        transform-origin: center;
+        transition: all 0.3s ease-in-out;
+    }
+    .nav-container.active  ul{
+        transform: translateX(0);
+    }
+    .close,.nav-container.active .open{
+        display: none;
+    }
+    .nav-container.active .backdrop{
+        transform: scale(999);
+        /* display: block; */
+        height: 100%;
+        width: 100%;
+    }
+    .nav-container.active .close{
+        display: block;
+    }
+    .hamburger{
+        cursor: pointer;
+    }
+    .nav-container.active .hamburger{
+        position: fixed;
+        right: 2rem;
+    }
+    .nav-container.active .logo{
+        position: fixed;
     }
 }
