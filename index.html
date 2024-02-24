@@ -11,12 +11,18 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:ital,wght@0,300;1,300&family=Work+Sans:ital@0;1&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
- 
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 <body>
   <header>
+    <video autoplay muted loop id="myVideo">
+      <source src="/images/desktop/image-hero_animation.mp4" type="video/mp4" class="desktop">
+      <source src="/images/mobile/image-hero_animation.mp4" type="video/mp4" class="mobile">
+    
+    </video>
     <div class="content">
-
+     
       <div class="nav-container">
           <img src="images/logo.svg" alt="" class="logo">
           <nav>
@@ -35,7 +41,7 @@
           </button>
        
         </div>
-        <h1> Immersive experiences that deliver</h1>
+        <h1 data-aos="textAnimation"> Immersive experiences that deliver</h1>
     </div>
     
   </header>
@@ -46,10 +52,10 @@
 
         <picture>
           <source srcset="images/desktop/image-interactive.jpg" alt="" media="(min-width:800px)">
-          <img src="images/mobile/image-interactive.jpg"/>
+          <img src="images/mobile/image-interactive.jpg" data-aos="zoom-in"/>
         </picture>
-        <div class="about-content">
-          <h2>The leader in interactive VR</h2>
+        <div class="about-content" data-aos="zoom-in">
+          <h2 data-aos="textAnimation">The leader in interactive VR</h2>
           <p>
             Founded in 2011, Loopstudios has been producing world-class virtual reality 
             projects for some of the best companies around the globe. Our award-winning 
@@ -60,59 +66,59 @@
       </div>
     </article>
     <section class="features">
-      <h2>Our creations</h2>
+      <h2 data-aos="textAnimation">Our creations</h2>
       <button class="btn">See all</button>
       <div class="feature-gallery">
-        <figure>
+        <figure data-aos="fade-up">
           <picture>
             <source srcset="images/desktop/image-deep-earth.jpg" alt="" media="(min-width:800px)">
             <img src="images/mobile/image-deep-earth.jpg"/>
           </picture>
           <figcaption>Deep earth</figcaption>
         </figure>
-        <figure>
+        <figure data-aos="fade-up">
           <picture>
             <source srcset="images/desktop/image-night-arcade.jpg" alt="" media="(min-width:800px)">
             <img src="images/mobile/image-night-arcade.jpg"/>
           </picture>
-          <figcaption>Night arcade</figcaption>
+          <figcaption >Night arcade</figcaption>
         </figure>
-        <figure>
+        <figure data-aos="fade-up">
           <picture>
             <source srcset="images/desktop/image-soccer-team.jpg" alt="" media="(min-width:800px)">
             <img src="images/mobile/image-soccer-team.jpg"/>
           </picture>
           <figcaption>Soccer team VR</figcaption>
         </figure>
-        <figure>
+        <figure data-aos="fade-up">
           <picture>
             <source srcset="images/desktop/image-grid.jpg" alt="" media="(min-width:800px)">
             <img src="images/mobile/image-grid.jpg"/>
           </picture>
           <figcaption>The grid</figcaption>
         </figure>
-        <figure>
+        <figure data-aos="fade-up">
           <picture>
             <source srcset="images/desktop/image-from-above.jpg" alt="" media="(min-width:800px)">
             <img src="images/mobile/image-from-above.jpg"/>
           </picture>
           <figcaption>From up above VR</figcaption>
         </figure>
-        <figure>
+        <figure data-aos="fade-up">
           <picture>
             <source srcset="images/desktop/image-pocket-borealis.jpg" alt="" media="(min-width:800px)">
             <img src="images/mobile/image-pocket-borealis.jpg"/>
           </picture>
           <figcaption>Pocket borealis</figcaption>
         </figure>
-        <figure>
+        <figure data-aos="fade-up">
           <picture>
             <source srcset="images/desktop/image-curiosity.jpg" alt="" media="(min-width:800px)">
             <img src="images/mobile/image-curiosity.jpg"/>
           </picture>
           <figcaption>The curiosity</figcaption>
         </figure>
-        <figure>
+        <figure data-aos="fade-up">
           <picture>
             <source srcset="images/desktop/image-fisheye.jpg" alt="" media="(min-width:800px)">
             <img src="images/mobile/image-fisheye.jpg"/>
@@ -129,10 +135,10 @@
     <img src="images/logo.svg" alt="">
     <nav class="social-link">
       <ul>
-        <li><a href="#none"><img src="images/icon-facebook.svg" alt=""></a></li>
-        <li><a href="#none"><img src="images/icon-instagram.svg" alt=""></a></li>
-        <li><a href="#none"><img src="images/icon-pinterest.svg" alt=""></a></li>
-        <li><a href="#none"><img src="images/icon-twitter.svg" alt=""></a></li>
+        <li><a href="#none" aria-label="facebook link"><img src="images/icon-facebook.svg" role="presentation" aria-hidden="true" alt=""></a></li>
+        <li><a href="#none" aria-label="instagram link"><img src="images/icon-instagram.svg" role="presentation" alt=""></a></li>
+        <li><a href="#none" aria-label="pinterest link"><img src="images/icon-pinterest.svg" role="presentation" alt=""></a></li>
+        <li><a href="#none" aria-label="twitter link"><img src="images/icon-twitter.svg" role="presentation" alt=""></a></li>
       </ul>
     </nav>
     <nav class="links">
@@ -149,7 +155,13 @@
       Coded by <a href="#">SG</a>.</p>
     </div>
   </footer>
-  
+  <script>
+    AOS.init({
+    offset: 100, 
+    delay: 100, 
+    duration: 500 
+  });
+    </script>
   <script src="app.js" defer></script>
 </body>
 </html>
