@@ -12,6 +12,7 @@ Thanks for checking out this front-end coding challenge.
   - [The challenge](#the-challenge)
   - [Screenshot](#screenshot)
   - [Built with](#built-with)
+  - [Links](#links)
 
 ## The challenge
 
@@ -20,14 +21,14 @@ Your users should be able to:
 - View the optimal layout for the site depending on their device's screen size
 - See hover states for all interactive elements on the page
 
-### Screenshot
-
-![](./screenshot.jpg)
-
 ## Built with
 
 - HTML
 - CSS
 - Javascript
+
+## [Links](#links)
+
+- Live URL:- https://stellular-mandazi-f5268b.netlify.app/
 
 **Have fun building!** 🚀
